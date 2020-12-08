@@ -1,0 +1,11 @@
+body{
+    background-color: lightblue;
+}
+
+$mainBlue: #2f5572;
+
+.heading{
+    h1{
+        color: $mainBlue;
+    }
+}
