@@ -17,12 +17,14 @@
   },
   "homepage": "https://github.com/emir91/99-cakes#readme",
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "loadash": "^1.0.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.1.0",
     "css-loader": "^5.0.1",
+    "postcss-import": "^13.0.0",
     "postcss-loader": "^4.1.0",
     "postcss-nested": "^5.0.3",
     "postcss-simple-vars": "^6.0.1",
