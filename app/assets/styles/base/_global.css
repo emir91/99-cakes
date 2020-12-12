@@ -2,3 +2,7 @@ body{
     font-family: 'Nunito', sans-serif;
     background-color: #836D69;
 }
+
+*{
+    box-sizing: border-box;
+}
