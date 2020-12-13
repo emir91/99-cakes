@@ -17,9 +17,10 @@
         list-style: none;
         display: inline-block;
         padding-right: 25px;
+
         @mixin atMedium{
             float: left;
-            display: inline-block;
+            display: block;
         }
     }
 
@@ -29,5 +30,11 @@
         display: block;
         font-weight: 300;
         padding: 14px 0;
+
+        @mixin atMedium {
+            &.is-current-link{
+                color: $nutmeg;
+            }
+        }
     }
 }
