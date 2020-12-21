@@ -1,20 +1,17 @@
 class Modal{
     constructor(){
         this.injectHTML();
-        this.openModalButtons = document.querySelectorAll('.open-modal');
         this.modal = document.querySelector('.my-modal');
         this.closeModalIcon = document.querySelector('.my-modal__close');
         this.events();
     }
 
     events(){
-        this.openModalButtons.forEach(el => el.addEventListener("click", e => this.openTheModal(e)));
         this.closeModalIcon.addEventListener("click", () => this.closeTheModal());
         document.addEventListener("keyup", e => this.keyPressHandler(e))
     }
 
-    openTheModal(e){
-        e.preventDefault();
+    openTheModal(){
         this.modal.classList.add('my-modal--is-visible');
     }
 
@@ -33,7 +30,7 @@ class Modal{
         <div class="my-modal">
             <div class="my-modal__inner text-center">
                 <h2>
-                    <img src="assets/images/icons/mail.svg">
+                    <img src="assets/images/icons/mail.png">
                     Get in touch
                 </h2>
                 <div class="wrapper wrapper--narrow">
