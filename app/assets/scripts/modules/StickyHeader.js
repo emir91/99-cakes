@@ -11,7 +11,7 @@ class StickyHeader{
     }
 
     events(){
-       window.addEventListener("scroll",throttle(() => this.runOnScroll(), 200));
+       window.addEventListener("scroll",throttle(() => this.runOnScroll(), 1));
        window.addEventListener("resize", debounce(() => {
         this.browserHeight = window.innerHeight;
         }, 333))
@@ -40,11 +40,17 @@ class StickyHeader{
 
     calcSection(el){
         if(window.scrollY + this.browserHeight > el.offsetTop && window.scrollY < el.offsetTop + el.offsetHeight){
-            let scrollPercent = el.getBoundingClientRect().y / this.browserHeight * 100;
-            if(scrollPercent < 18 && scrollPercent > -0.1 && this.scrollDirection == "down" || scrollPercent < 33 && this.scrollDirection == "up"){
+            let scrollPercent = (el.getBoundingClientRect().y / this.browserHeight) * 100;
+            console.log(scrollPercent);
+            if(scrollPercent < 30 &&  scrollPercent > -0.1 && this.scrollDirection == "down" || scrollPercent < 33 && this.scrollDirection == "up"){
                 let matchingLink = el.getAttribute("data-matching-link");
                 document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => el.classList.remove("is-current-link"))
                 document.querySelector(matchingLink).classList.add("is-current-link");
+            }
+
+            let beginningLink = document.querySelector("#our-story-link");
+            if (window.scrollY == 0 && beginningLink.classList.contains("is-current-link")){
+                beginningLink.classList.remove("is-current-link");
             }
         }
     }

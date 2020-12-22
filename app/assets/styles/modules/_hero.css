@@ -1,0 +1,17 @@
+.hero{
+    &__title{
+        font-family: 'Ranchers', cursive;
+        font-size: 3.2rem;
+        margin: 0;
+    }
+
+    &__subtitle{
+       font-size: 1.3rem;
+       margin-bottom: 0;
+    }
+
+    &__description{
+        font-size: .88rem;
+        margin-bottom: 4px;
+    }
+}

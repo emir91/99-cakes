@@ -1,0 +1,6 @@
+.top-section{
+   @mixin atMedium{
+        position: relative;
+        top: 70px;
+    }
+}

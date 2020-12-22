@@ -4,6 +4,11 @@
     padding: .5rem 0;
     text-align: center;
 
+    @mixin atMedium{
+        position: relative;
+        top: 50px;
+    }
+
     p{
         margin-top: 1rem;
     }
