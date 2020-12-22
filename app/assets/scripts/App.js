@@ -3,7 +3,9 @@ import '../styles/styles.css'
 import 'lazysizes'
 import MobileMenu from './modules/MobileMenu';
 import StickyHeader from './modules/StickyHeader';
-import RevealOnScroll from './modules/RevealOnScroll'
+import RevealOnScroll from './modules/RevealOnScroll';
+
+alert("testing!!")
 
 new RevealOnScroll();
 new StickyHeader();
