@@ -3,7 +3,7 @@ import debounce from 'lodash/debounce'
 
 class RevealOnScroll{
     constructor(){
-        this.itemsToReveal = document.querySelectorAll('.blurb');
+        this.itemsToReveal = document.querySelectorAll('.reveal-on-scroll');
         this.hideInitially();
         this.scrollThrottle = throttle(this.calcCaller, 200).bind(this);
         this.browserHeight = window.innerHeight;

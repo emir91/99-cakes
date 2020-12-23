@@ -3,4 +3,15 @@
         position: relative;
         top: 70px;
     }
+
+    @mixin atLarge{
+        position: relative;
+        top: 70px;
+
+        &__bottom{
+            position: relative;
+            top: 80px;
+            padding-bottom: 33px;
+        }
+    }
 }

@@ -5,8 +5,6 @@ import MobileMenu from './modules/MobileMenu';
 import StickyHeader from './modules/StickyHeader';
 import RevealOnScroll from './modules/RevealOnScroll';
 
-alert("testing!!")
-
 new RevealOnScroll();
 new StickyHeader();
 new MobileMenu();

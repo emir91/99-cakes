@@ -41,8 +41,8 @@ class StickyHeader{
     calcSection(el){
         if(window.scrollY + this.browserHeight > el.offsetTop && window.scrollY < el.offsetTop + el.offsetHeight){
             let scrollPercent = (el.getBoundingClientRect().y / this.browserHeight) * 100;
-            console.log(scrollPercent);
-            if(scrollPercent < 30 &&  scrollPercent > -0.1 && this.scrollDirection == "down" || scrollPercent < 33 && this.scrollDirection == "up"){
+            console.log(window.scrollY);
+            if(scrollPercent < 35 &&  scrollPercent > -0.1 && this.scrollDirection == "down" || scrollPercent < 33 && this.scrollDirection == "up"){
                 let matchingLink = el.getAttribute("data-matching-link");
                 document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => el.classList.remove("is-current-link"))
                 document.querySelector(matchingLink).classList.add("is-current-link");
@@ -51,6 +51,13 @@ class StickyHeader{
             let beginningLink = document.querySelector("#our-story-link");
             if (window.scrollY == 0 && beginningLink.classList.contains("is-current-link")){
                 beginningLink.classList.remove("is-current-link");
+            }
+
+            let endingLink = document.querySelector("#stores-link");
+            let middleLink = document.querySelector("#features-link")
+            if (window.scrollY > 861){
+                middleLink.classList.remove("is-current-link");
+                endingLink.classList.add("is-current-link");
             }
         }
     }
